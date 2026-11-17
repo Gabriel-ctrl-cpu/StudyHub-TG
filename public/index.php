@@ -1,10 +1,4 @@
 <?php
-/**
- * public/index.php
- *
- * Front controller: ponto de entrada único da aplicação.
- * Inicializa sessão, configuração, carrega o Router e despacha a requisição.
- */
 
 declare(strict_types=1);
 
