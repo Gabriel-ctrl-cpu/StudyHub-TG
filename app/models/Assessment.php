@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/Assessment.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
@@ -43,9 +40,6 @@ class Assessment extends Model
         return $linha !== null;
     }
 
-    /**
-     * Avaliações agendadas dentro dos próximos N dias (para notificações).
-     */
     public function upcomingWithinDays(int $idUsuario, int $dias = 3): array
     {
         $sql = "
