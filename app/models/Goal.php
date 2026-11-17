@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/Goal.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
@@ -29,18 +26,6 @@ class Goal extends Model
         return $total > 0 ? (int) round(($concluidas / $total) * 100) : 0;
     }
 
-    /**
-     * Recalcula automaticamente o progresso das metas do tipo "horas"
-     * (a partir das sessões de estudo reais) e "tarefas" (a partir das
-     * tarefas concluídas), sempre que o usuário abre a tela de Metas —
-     * elimina a necessidade de atualizar manualmente esses dois tipos.
-     * Metas do tipo "exercicios" e "personalizada" continuam manuais,
-     * pois não existe uma tabela de origem para calculá-las sozinhas.
-     */
-    /**
-     * @return array Metas que acabaram de ser concluídas nesta chamada
-     *               (para o Controller poder gerar uma notificação, por exemplo).
-     */
     public function syncAutoProgress(int $idUsuario): array
     {
         $metas = $this->query(
