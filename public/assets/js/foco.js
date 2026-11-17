@@ -1,10 +1,3 @@
-/**
- * assets/js/foco.js
- * Cronômetro Pomodoro do Modo Foco. Controla os ciclos de foco/pausa,
- * a animação do anel de progresso (SVG) e registra automaticamente
- * a sessão de estudo no back-end quando um ciclo de foco é concluído
- * (naturalmente ou ao clicar em "Finalizar").
- */
 document.addEventListener('DOMContentLoaded', () => {
     const subjectSelect = document.getElementById('focusSubject');
     const modeButtons = document.querySelectorAll('.focus-mode-btn');
