@@ -1,9 +1,3 @@
-/**
- * assets/js/theme.js
- * Alterna entre tema claro e escuro, salvando a preferência via
- * requisição assíncrona (para persistir no perfil do usuário) e
- * aplicando imediatamente no <html data-bs-theme="">.
- */
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('themeToggle');
     const htmlEl = document.documentElement;
@@ -20,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: 'theme=' + encodeURIComponent(next),
         }).catch(() => {
-            // Falha de rede não deve impedir a troca visual do tema.
         });
     });
 });
