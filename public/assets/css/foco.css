@@ -1,0 +1,89 @@
+/* ===================== MODO FOCO ===================== */
+
+.focus-card {
+    background: var(--sh-surface);
+    border: 1px solid var(--sh-border);
+    border-radius: var(--sh-radius);
+    box-shadow: var(--sh-shadow);
+    padding: 28px;
+    text-align: center;
+}
+
+.focus-subject-select { max-width: 320px; margin: 0 auto 20px; text-align: left; }
+
+.focus-mode-toggle {
+    display: inline-flex;
+    background: var(--sh-bg);
+    border-radius: 30px;
+    padding: 4px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.focus-mode-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--sh-text-muted);
+}
+.focus-mode-btn.active { background: var(--sh-primary); color: #fff; }
+.focus-mode-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.focus-timer-wrap {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 28px;
+}
+.focus-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.focus-ring-bg {
+    fill: none;
+    stroke: var(--sh-border);
+    stroke-width: 12;
+}
+.focus-ring-progress {
+    fill: none;
+    stroke: var(--sh-primary);
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
+}
+.focus-ring-progress.is-break { stroke: var(--sh-success); }
+
+.focus-timer-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.focus-timer-center span {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--sh-text-muted);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.focus-timer-center strong {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--sh-text);
+}
+
+.focus-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.btn-focus { min-width: 130px; }
+
+@media (max-width: 575.98px) {
+    .focus-timer-wrap { width: 180px; height: 180px; }
+    .focus-timer-center strong { font-size: 2.2rem; }
+}

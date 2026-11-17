@@ -1,0 +1,20 @@
+/* ===================== AVALIAÇÕES ===================== */
+
+.assessments-table { font-size: 0.86rem; }
+.assessments-table th {
+    color: var(--sh-text-muted);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    border: none;
+    padding: 14px 16px;
+}
+.assessments-table td { border-color: var(--sh-border); padding: 14px 16px; }
+.fw-medium { font-weight: 500; }
+
+.assessment-status-agendado { background: #e8effe; color: var(--sh-primary); }
+.assessment-status-realizado { background: #fef2e0; color: #b45309; }
+.assessment-status-corrigido { background: #e4f7ea; color: var(--sh-success); }
+[data-bs-theme="dark"] .assessment-status-agendado { background: rgba(37,99,235,0.18); }
+[data-bs-theme="dark"] .assessment-status-realizado { background: rgba(234,179,8,0.15); }
+[data-bs-theme="dark"] .assessment-status-corrigido { background: rgba(22,163,74,0.18); }

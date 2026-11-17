@@ -1,0 +1,110 @@
+/* ===================== TAREFAS ===================== */
+
+.task-filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.filter-chip {
+    padding: 7px 16px;
+    border-radius: 30px;
+    background: var(--sh-surface);
+    border: 1px solid var(--sh-border);
+    color: var(--sh-text-muted);
+    font-size: 0.83rem;
+    font-weight: 500;
+}
+.filter-chip:hover { color: var(--sh-primary); border-color: var(--sh-primary); }
+.filter-chip.active {
+    background: var(--sh-primary);
+    border-color: var(--sh-primary);
+    color: #fff;
+}
+
+.task-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.task-filter-row .form-select { width: auto; min-width: 160px; }
+
+.task-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--sh-surface);
+    border: 1px solid var(--sh-border);
+    border-radius: 8px;
+    padding: 6px 12px;
+    flex: 1;
+    min-width: 200px;
+    color: var(--sh-text-muted);
+}
+.task-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: var(--sh-text);
+    font-size: 0.85rem;
+}
+
+.task-list { list-style: none; margin: 0; }
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--sh-border);
+}
+.task-item:last-child { border-bottom: none; }
+.task-item.is-done .task-item-title {
+    text-decoration: line-through;
+    color: var(--sh-text-muted);
+}
+
+.task-check-form { display: contents; }
+.task-checkbox {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--sh-border);
+    flex-shrink: 0;
+}
+.task-item.is-done .task-checkbox { color: var(--sh-success); }
+.task-checkbox:hover { color: var(--sh-primary); }
+
+.task-item-content { flex: 1; min-width: 0; }
+.task-item-title { font-weight: 500; margin-bottom: 4px; }
+.task-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.78rem;
+    color: var(--sh-text-muted);
+    align-items: center;
+}
+.task-item-meta .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 3px; }
+
+.status-badge { font-weight: 500; font-size: 0.7rem; }
+.status-pendente { background: #fef2e0; color: #b45309; }
+.status-em_andamento { background: #e8effe; color: var(--sh-primary); }
+.status-concluida { background: #e4f7ea; color: var(--sh-success); }
+.status-cancelada { background: #f1f2f5; color: var(--sh-text-muted); }
+.status-atrasada { background: #fde8e8; color: var(--sh-danger); }
+.status-concluida-atraso { background: #fef2e0; color: #b45309; }
+[data-bs-theme="dark"] .status-pendente { background: rgba(234,179,8,0.15); }
+[data-bs-theme="dark"] .status-em_andamento { background: rgba(37,99,235,0.18); }
+[data-bs-theme="dark"] .status-concluida { background: rgba(22,163,74,0.18); }
+[data-bs-theme="dark"] .status-cancelada { background: rgba(255,255,255,0.06); }
+[data-bs-theme="dark"] .status-atrasada { background: rgba(220,38,38,0.18); }
+[data-bs-theme="dark"] .status-concluida-atraso { background: rgba(234,179,8,0.15); }
+
+.task-priority-badge { font-weight: 500; flex-shrink: 0; }
+
+@media (max-width: 575.98px) {
+    .task-item { flex-wrap: wrap; }
+    .task-priority-badge { order: 3; }
+}

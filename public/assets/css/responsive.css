@@ -1,0 +1,73 @@
+/* =====================================================================
+   responsive.css — Ajustes finais de responsividade (mobile/tablet)
+   Carregado por último para poder sobrescrever os módulos anteriores.
+   ===================================================================== */
+
+/* ---------- Tipografia e espaçamento geral ---------- */
+@media (max-width: 575.98px) {
+    .page-header h1 { font-size: 1.3rem; }
+    .page-header p { font-size: 0.85rem; }
+    .dash-card, .summary-card, .focus-card, .subject-card, .goal-card { padding: 16px; }
+    .app-content { padding: 16px 12px 32px; }
+}
+
+/* ---------- Header ---------- */
+@media (max-width: 767.98px) {
+    .app-search { display: none; }
+    .app-header { gap: 8px; padding: 12px 14px; }
+    .app-user-info { display: none !important; }
+}
+
+/* ---------- Sidebar ---------- */
+@media (max-width: 991.98px) {
+    .brand-slogan { display: none; }
+    .sidebar-brand { padding-bottom: 14px; margin-bottom: 10px; }
+}
+
+/* ---------- Cards de resumo / grids ---------- */
+@media (max-width: 575.98px) {
+    .summary-value { font-size: 1.2rem; }
+    .summary-label { font-size: 0.72rem; }
+}
+
+/* ---------- Tabelas ---------- */
+@media (max-width: 767.98px) {
+    .assessments-table th, .assessments-table td { padding: 10px 12px; white-space: nowrap; }
+    .sessions-table th, .sessions-table td { padding: 8px 10px; }
+}
+
+/* ---------- Formulários ---------- */
+@media (max-width: 575.98px) {
+    .dash-card[style*="max-width"] { max-width: 100% !important; }
+}
+
+/* ---------- Calendário (FullCalendar) ---------- */
+@media (max-width: 767.98px) {
+    .fc .fc-toolbar { flex-direction: column; gap: 10px; align-items: stretch; }
+    .fc .fc-toolbar-title { font-size: 1rem; text-align: center; }
+    .fc .fc-button { padding: 5px 10px; font-size: 0.78rem; }
+    .calendar-legend { justify-content: center; }
+}
+
+/* ---------- Modo Foco ---------- */
+@media (max-width: 767.98px) {
+    .focus-controls { flex-direction: column; }
+    .btn-focus { width: 100%; }
+}
+
+/* ---------- Filtros de tarefas ---------- */
+@media (max-width: 575.98px) {
+    .task-filter-row { flex-direction: column; align-items: stretch; }
+    .task-filter-row .form-select { width: 100%; }
+}
+
+/* ---------- Modais ---------- */
+@media (max-width: 575.98px) {
+    .modal-dialog { margin: 12px; }
+}
+
+/* ---------- Configurações ---------- */
+@media (max-width: 575.98px) {
+    .settings-row { flex-direction: row; align-items: flex-start; }
+    .settings-row-desc { font-size: 0.75rem; }
+}

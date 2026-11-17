@@ -1,0 +1,29 @@
+/* ===================== PERFIL ===================== */
+
+.profile-avatar-wrap { display: flex; justify-content: center; }
+
+.profile-avatar-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--sh-primary-soft);
+}
+
+.profile-avatar-placeholder {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--sh-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.profile-stats-list { display: flex; flex-direction: column; gap: 12px; }
+.profile-stats-list li { font-size: 0.88rem; color: var(--sh-text); }
+.profile-stats-list i { width: 20px; color: var(--sh-primary); margin-right: 8px; }

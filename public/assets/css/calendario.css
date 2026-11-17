@@ -1,0 +1,38 @@
+/* ===================== CALENDÁRIO ===================== */
+
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 0.82rem;
+    color: var(--sh-text-muted);
+}
+.calendar-legend i { font-size: 0.6rem; margin-right: 5px; }
+
+#calendar { color: var(--sh-text); }
+
+.fc {
+    --fc-border-color: var(--sh-border);
+    --fc-page-bg-color: var(--sh-surface);
+    --fc-neutral-bg-color: var(--sh-bg);
+    --fc-list-event-hover-bg-color: var(--sh-bg);
+    --fc-today-bg-color: var(--sh-primary-soft);
+}
+.fc .fc-toolbar-title { font-family: var(--font-heading); font-size: 1.15rem; color: var(--sh-text); }
+.fc .fc-button-primary {
+    background-color: var(--sh-surface);
+    border-color: var(--sh-border);
+    color: var(--sh-text);
+    text-transform: capitalize;
+    box-shadow: none !important;
+}
+.fc .fc-button-primary:hover { background-color: var(--sh-bg); }
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: var(--sh-primary);
+    border-color: var(--sh-primary);
+    color: #fff;
+}
+.fc .fc-daygrid-day-number, .fc .fc-col-header-cell-cushion { color: var(--sh-text); }
+.fc-event { border: none; font-size: 0.75rem; cursor: pointer; }
+.fc-daygrid-event { padding: 1px 4px; border-radius: 5px; }

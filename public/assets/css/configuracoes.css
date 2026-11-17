@@ -1,0 +1,30 @@
+/* ===================== CONFIGURAÇÕES ===================== */
+
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--sh-border);
+}
+.settings-row:last-of-type { border-bottom: none; }
+
+.settings-row-title { font-weight: 500; font-size: 0.9rem; }
+.settings-row-desc { color: var(--sh-text-muted); font-size: 0.8rem; margin-top: 2px; }
+
+.settings-note {
+    font-size: 0.75rem;
+    color: var(--sh-text-muted);
+    margin: 10px 0 0;
+}
+
+.form-check-input:checked {
+    background-color: var(--sh-primary);
+    border-color: var(--sh-primary);
+}
+
+.danger-zone {
+    border-color: #f5c2c7 !important;
+}
+[data-bs-theme="dark"] .danger-zone { border-color: rgba(220,38,38,0.35) !important; }

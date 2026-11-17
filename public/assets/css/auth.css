@@ -1,0 +1,116 @@
+/* ===================== AUTH (login / cadastro / recuperação) ===================== */
+
+.auth-body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--sh-bg);
+}
+
+.auth-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.auth-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 8vw;
+    position: relative;
+}
+
+.auth-back {
+    position: absolute;
+    top: 32px;
+    left: 8vw;
+    color: var(--sh-text-muted);
+    font-size: 0.9rem;
+}
+.auth-back:hover { color: var(--sh-primary); }
+
+.auth-form-box {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.auth-title {
+    font-size: 1.9rem;
+    margin-bottom: 6px;
+}
+
+.auth-subtitle {
+    color: var(--sh-text-muted);
+    margin-bottom: 28px;
+}
+
+.btn-auth {
+    padding: 12px;
+    font-weight: 600;
+    border-radius: var(--sh-radius-sm);
+}
+
+.auth-link {
+    color: var(--sh-primary);
+    font-weight: 500;
+}
+
+.auth-footer-text {
+    text-align: center;
+    margin-top: 24px;
+    color: var(--sh-text-muted);
+}
+
+.auth-hero {
+    flex: 1;
+    background: linear-gradient(160deg, var(--sh-primary) 0%, var(--sh-accent) 100%);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.auth-hero-content { max-width: 460px; }
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.auth-hero h2 {
+    color: #fff;
+    font-size: 2.1rem;
+    margin: 20px 0 14px;
+}
+
+.auth-hero p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05rem;
+}
+
+.auth-hero-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+}
+.auth-hero-list li {
+    margin-bottom: 12px;
+    font-size: 0.98rem;
+}
+.auth-hero-list i {
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    padding: 4px 6px;
+    margin-right: 8px;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 991.98px) {
+    .auth-panel { padding: 40px 6vw; }
+    .auth-back { left: 6vw; }
+}

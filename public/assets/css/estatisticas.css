@@ -1,0 +1,10 @@
+/* ===================== ESTATÍSTICAS ===================== */
+
+.stats-section-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--sh-text-muted);
+    margin-bottom: 12px;
+}

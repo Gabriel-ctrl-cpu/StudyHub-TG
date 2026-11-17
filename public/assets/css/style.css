@@ -1,0 +1,94 @@
+/* =====================================================================
+   style.css — Fundação visual do StudyHub (variáveis, reset leve)
+   ===================================================================== */
+
+:root {
+    --sh-primary: #2563eb;
+    --sh-primary-dark: #1d4ed8;
+    --sh-primary-soft: #e8effe;
+    --sh-accent: #7c3aed;
+    --sh-success: #16a34a;
+    --sh-warning: #eab308;
+    --sh-danger: #dc2626;
+    --sh-bg: #f4f6fb;
+    --sh-surface: #ffffff;
+    --sh-border: #e6e9f2;
+    --sh-text: #1e2432;
+    --sh-text-muted: #6b7280;
+    --sh-radius: 16px;
+    --sh-radius-sm: 10px;
+    --sh-shadow: 0 4px 20px rgba(30, 41, 59, 0.06);
+    --sh-shadow-md: 0 8px 30px rgba(30, 41, 59, 0.09);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+[data-bs-theme="dark"] {
+    --sh-bg: #0f1420;
+    --sh-surface: #171d2b;
+    --sh-border: #262e42;
+    --sh-text: #e7eaf3;
+    --sh-text-muted: #9aa3b8;
+    --sh-primary-soft: #1b2540;
+    --sh-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    --sh-shadow-md: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: var(--font-body);
+    color: var(--sh-text);
+    background-color: var(--sh-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--sh-text);
+}
+
+a { text-decoration: none; }
+
+.btn-primary {
+    background-color: var(--sh-primary);
+    border-color: var(--sh-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--sh-primary-dark);
+    border-color: var(--sh-primary-dark);
+}
+.btn-outline-primary {
+    color: var(--sh-primary);
+    border-color: var(--sh-primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--sh-primary);
+    border-color: var(--sh-primary);
+}
+
+.bg-blue-soft   { background: #e8effe; }
+.bg-green-soft  { background: #e4f7ea; }
+.bg-purple-soft { background: #f1e9fe; }
+.bg-orange-soft { background: #fef2e0; }
+.text-blue   { color: var(--sh-primary); }
+.text-green  { color: var(--sh-success); }
+.text-purple { color: var(--sh-accent); }
+.text-orange { color: #d97706; }
+
+.text-bg-danger-soft {
+    background: #fde8e8;
+    color: var(--sh-danger);
+    font-weight: 500;
+}
+[data-bs-theme="dark"] .text-bg-danger-soft {
+    background: rgba(220, 38, 38, 0.18);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--sh-border); border-radius: 8px; }
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--sh-primary);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}

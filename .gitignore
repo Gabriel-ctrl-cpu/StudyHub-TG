@@ -1,0 +1,21 @@
+# Ambiente
+.env
+.DS_Store
+Thumbs.db
+
+# Dependências (caso futuramente algum gerenciador seja usado)
+/vendor/
+/node_modules/
+
+# Logs e cache
+*.log
+/storage/cache/*
+!/storage/cache/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# Uploads de usuários (fotos de perfil etc.)
+/public/assets/images/uploads/*
+!/public/assets/images/uploads/.gitkeep

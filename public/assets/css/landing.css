@@ -1,0 +1,163 @@
+/* ===================== LANDING PAGE ===================== */
+
+.landing-body { margin: 0; }
+
+.landing-nav {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(30,41,59,0.05);
+    padding: 14px 0;
+}
+[data-bs-theme="dark"] .landing-nav { background: rgba(15,20,32,0.92); }
+
+.landing-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--sh-primary) !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.landing-nav .nav-link {
+    color: var(--sh-text);
+    font-weight: 500;
+    margin: 0 10px;
+}
+.landing-nav .nav-link:hover { color: var(--sh-primary); }
+
+.landing-hero {
+    padding: 160px 0 90px;
+    background: radial-gradient(circle at 80% 10%, var(--sh-primary-soft) 0%, var(--sh-bg) 55%);
+}
+
+.landing-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--sh-primary-soft);
+    color: var(--sh-primary);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.landing-title {
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+.landing-title span { color: var(--sh-primary); }
+
+.landing-subtitle {
+    font-size: 1.15rem;
+    color: var(--sh-text-muted);
+    max-width: 520px;
+}
+
+.landing-hero-card {
+    background: var(--sh-surface);
+    border-radius: var(--sh-radius);
+    box-shadow: var(--sh-shadow-md);
+    padding: 40px;
+    text-align: center;
+    border: 1px solid var(--sh-border);
+}
+.landing-hero-card-header {
+    color: var(--sh-text-muted);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.landing-hero-progress {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--sh-primary);
+}
+
+.landing-section { padding: 90px 0; }
+.landing-section-alt { background: var(--sh-surface); }
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.section-subtitle {
+    text-align: center;
+    color: var(--sh-text-muted);
+    font-size: 1.05rem;
+}
+
+.feature-card {
+    background: var(--sh-surface);
+    border: 1px solid var(--sh-border);
+    border-radius: var(--sh-radius);
+    padding: 28px 22px;
+    height: 100%;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sh-shadow-md);
+}
+.feature-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--sh-primary-soft);
+    color: var(--sh-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+}
+.feature-card p { color: var(--sh-text-muted); margin: 0; font-size: 0.93rem; }
+
+.step-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--sh-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0 auto;
+}
+
+.landing-check-list { list-style: none; padding: 0; margin: 20px 0; }
+.landing-check-list li { margin-bottom: 10px; color: var(--sh-text); }
+.landing-check-list i { color: var(--sh-success); margin-right: 8px; }
+
+.landing-quote-card {
+    background: linear-gradient(160deg, var(--sh-primary) 0%, var(--sh-accent) 100%);
+    color: #fff;
+    border-radius: var(--sh-radius);
+    padding: 40px;
+}
+.landing-quote-card i { font-size: 1.6rem; opacity: 0.6; }
+.landing-quote-card p { font-size: 1.3rem; font-family: var(--font-heading); margin: 16px 0; }
+
+.landing-footer {
+    background: var(--sh-text);
+    color: rgba(255,255,255,0.85);
+    padding: 40px 0;
+}
+.landing-footer .landing-brand { color: #fff !important; justify-content: center; }
+
+@media (max-width: 767.98px) {
+    .landing-hero { padding: 130px 0 60px; }
+    .landing-title { font-size: 2.2rem; }
+}
