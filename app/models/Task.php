@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/Task.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
@@ -24,9 +21,6 @@ class Task extends Model
         return (int) ($linha['total'] ?? 0);
     }
 
-    /**
-     * Próximas tarefas pendentes/em andamento, ordenadas por prazo.
-     */
     public function upcoming(int $idUsuario, int $limite = 4): array
     {
         $sql = "
@@ -62,9 +56,6 @@ class Task extends Model
         return $this->query($sql, ['user_id' => $idUsuario]);
     }
 
-    /**
-     * Tarefas pendentes/em andamento cujo prazo já passou (para notificações).
-     */
     public function overdue(int $idUsuario): array
     {
         $sql = "
@@ -76,9 +67,6 @@ class Task extends Model
         return $this->query($sql, ['user_id' => $idUsuario]);
     }
 
-    /**
-     * Quantidade de tarefas concluídas por dia, últimos N dias (para gráfico).
-     */
     public function completedByDay(int $idUsuario, int $dias = 7): array
     {
         $sql = "
@@ -109,9 +97,7 @@ class Task extends Model
         return $total > 0 ? (int) round(($concluidas / $total) * 100) : 0;
     }
 
-    /**
-     * Lista tarefas do usuário aplicando filtros (status, prioridade, período, busca).
-     */
+
     public function filtered(int $idUsuario, array $filtros = []): array
     {
         $conditions = ['t.user_id = :user_id'];
@@ -157,16 +143,6 @@ class Task extends Model
         return $this->query($sql, $params);
     }
 
-    /**
-     * Calcula o status "de exibição" da tarefa, considerando automaticamente
-     * atrasos — sem exigir nenhuma ação manual do usuário:
-     *  - pendente/em_andamento com prazo já vencido  → "Atrasada"
-     *  - concluída depois do prazo                    → "Concluída com atraso"
-     *  - concluída no prazo (ou sem prazo definido)    → "Concluída"
-     *  - cancelada                                      → "Cancelada"
-     *
-     * Retorna ['label' => texto exibido, 'css' => classe CSS do badge].
-     */
     public static function computeStatus(array $tarefa): array
     {
         $hoje = date('Y-m-d');
