@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/Notification.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
@@ -32,12 +29,6 @@ class Notification extends Model
         );
     }
 
-    /**
-     * Cria uma notificação apenas se ainda não existir uma igual para o
-     * mesmo evento (mesmo usuário + related_type + related_id + tipo).
-     * Usa INSERT IGNORE em conjunto com a UNIQUE KEY da tabela — chamar
-     * este método várias vezes para o mesmo evento é seguro (idempotente).
-     */
     public function notifyOnce(int $idUsuario, string $tipo, string $tipoRelacionado, int $idRelacionado, string $titulo, string $mensagem): void
     {
         $sql = "INSERT IGNORE INTO notifications (user_id, title, message, notification_type, related_type, related_id)
