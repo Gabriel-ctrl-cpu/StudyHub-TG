@@ -1,11 +1,4 @@
 <?php
-/**
- * app/core/Model.php
- *
- * Model base: encapsula o acesso ao PDO e fornece operações CRUD
- * genéricas reutilizáveis pelos models específicos (Task, Subject, etc).
- * Toda query usa prepared statements — nunca concatenar valores no SQL.
- */
 
 abstract class Model
 {
