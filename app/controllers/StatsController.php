@@ -1,12 +1,4 @@
 <?php
-/**
- * app/controllers/StatsController.php
- *
- * Página de análise pessoal: horas estudadas (hoje/semana/mês/total),
- * tarefas (criadas/concluídas/pendentes/taxa de conclusão), tempo por
- * matéria e gráficos (Chart.js). Todos os dados são exclusivos do
- * próprio usuário — sem ranking nem comparação entre usuários.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/StudySession.php';
