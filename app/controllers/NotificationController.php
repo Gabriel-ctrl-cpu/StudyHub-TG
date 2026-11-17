@@ -1,16 +1,4 @@
 <?php
-/**
- * app/controllers/NotificationController.php
- *
- * Endpoint AJAX consumido pelo header em todas as páginas. Antes de
- * retornar a lista, sincroniza (gera) notificações reais a partir de
- * três eventos do sistema:
- *   - meta concluída automaticamente (Goal::syncAutoProgress)
- *   - tarefa que ficou atrasada (prazo vencido, ainda não concluída)
- *   - avaliação agendada para os próximos 3 dias
- * A criação é idempotente (Notification::notifyOnce), então rodar isso
- * em toda requisição não gera duplicatas.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Notification.php';
@@ -54,11 +42,6 @@ class NotificationController extends Controller
         $this->json(['success' => true]);
     }
 
-    /**
-     * Gera notificações reais a partir do estado atual dos dados do
-     * usuário. Seguro para chamar em toda requisição — a criação é
-     * idempotente (não duplica notificação para o mesmo evento).
-     */
     private function syncNotifications(int $idUsuario): void
     {
         $modeloNotificacao = new Notification();
