@@ -1,7 +1,3 @@
-/**
- * assets/js/app.js
- * Comportamentos gerais da área autenticada: abrir/fechar sidebar no mobile.
- */
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('sidebarToggle');
     const sidebar = document.getElementById('appSidebar');
