@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/User.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
