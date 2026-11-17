@@ -1,28 +1,15 @@
 <?php
-/**
- * config/database.php
- *
- * Configuração central de conexão com o banco de dados MySQL via PDO.
- * Ajuste as constantes abaixo conforme o ambiente (XAMPP por padrão).
- */
 
-// ---------------------------------------------------------------------
-// Credenciais do banco de dados
-// ---------------------------------------------------------------------
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'studyhub');
 define('DB_USER', 'root');
-define('DB_PASS', '');       // XAMPP: senha padrão do root é vazia
+define('DB_PASS', '');     
 define('DB_CHARSET', 'utf8mb4');
 
-// ---------------------------------------------------------------------
-// Configurações gerais da aplicação
-// ---------------------------------------------------------------------
 define('APP_NAME', 'StudyHub');
 define('APP_URL', 'http://localhost/studyhub/public');
 define('APP_ENV', 'development'); // development | production
 
-// Exibir erros apenas em desenvolvimento
 if (APP_ENV === 'development') {
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -32,11 +19,6 @@ if (APP_ENV === 'development') {
     error_reporting(0);
 }
 
-/**
- * Retorna uma instância única (singleton) de PDO conectada ao banco.
- *
- * @return PDO
- */
 function db(): PDO
 {
     static $pdo = null;
