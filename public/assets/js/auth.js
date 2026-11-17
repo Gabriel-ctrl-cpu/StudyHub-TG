@@ -1,7 +1,3 @@
-/**
- * assets/js/auth.js
- * Alterna a visibilidade do campo de senha nos formulários de login/cadastro.
- */
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.toggle-password').forEach((btn) => {
         btn.addEventListener('click', () => {
