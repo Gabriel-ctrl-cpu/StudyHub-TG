@@ -1,10 +1,4 @@
 <?php
-/**
- * app/core/Router.php
- *
- * Router minimalista: mapeia rotas HTTP (método + caminho) para
- * Controller@metodo, suportando parâmetros dinâmicos como {id}.
- */
 
 class Router
 {
@@ -29,14 +23,10 @@ class Router
         ];
     }
 
-    /**
-     * Resolve a requisição atual e despacha para o Controller correspondente.
-     */
     public function dispatch(string $uri, string $method): void
     {
         $uri = trim(parse_url($uri, PHP_URL_PATH), '/');
 
-        // Remove o prefixo até a pasta public/, caso o app esteja em subpasta
         $basePath = trim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/');
         if ($basePath !== '' && str_starts_with($uri, $basePath)) {
             $uri = trim(substr($uri, strlen($basePath)), '/');
