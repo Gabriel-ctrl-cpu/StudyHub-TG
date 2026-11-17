@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/Subject.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
@@ -27,9 +24,6 @@ class Subject extends Model
         return $linha !== null;
     }
 
-    /**
-     * Progresso de cada matéria: percentual de tarefas concluídas e minutos estudados.
-     */
     public function progressByUser(int $idUsuario): array
     {
         $sql = "
