@@ -1,10 +1,4 @@
 <?php
-/**
- * app/controllers/NoteController.php
- *
- * CRUD completo de anotações, com pesquisa por texto/tag e filtro
- * por matéria — interface de bloco de notas.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Note.php';
@@ -158,7 +152,6 @@ class NoteController extends Controller
             return null;
         }
 
-        // Normaliza tags: "javascript, funcoes" -> "javascript,funcoes"
         if ($etiquetas !== null) {
             $etiquetas = implode(',', array_filter(array_map('trim', explode(',', $etiquetas))));
         }
