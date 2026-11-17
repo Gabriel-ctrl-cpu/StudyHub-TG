@@ -1,21 +1,8 @@
 <?php
-/**
- * app/core/Controller.php
- *
- * Controller base: fornece helpers comuns a todos os controllers
- * (renderização de views com layout, redirecionamento, autenticação,
- * flash messages, validação básica de CSRF).
- */
 
 class Controller
 {
-    /**
-     * Renderiza uma view dentro do layout principal (ou de autenticação).
-     *
-     * @param string $view  Caminho da view relativo a app/views, sem .php (ex: 'dashboard/index')
-     * @param array  $data  Dados a serem extraídos como variáveis na view
-     * @param string $layout Nome do arquivo de layout em app/views/layouts (sem .php)
-     */
+ 
     protected function render(string $view, array $data = [], string $layout = 'app'): void
     {
         extract($data);
@@ -38,9 +25,6 @@ class Controller
         }
     }
 
-    /**
-     * Renderiza apenas a view, sem layout (útil para respostas parciais/AJAX em HTML).
-     */
     protected function renderPartial(string $view, array $data = []): void
     {
         extract($data);
@@ -51,9 +35,6 @@ class Controller
         require $viewFile;
     }
 
-    /**
-     * Retorna uma resposta JSON e encerra a execução.
-     */
     protected function json($data, int $statusCode = 200): void
     {
         http_response_code($statusCode);
@@ -69,10 +50,6 @@ class Controller
         exit;
     }
 
-    /**
-     * Garante que existe um usuário autenticado na sessão; caso contrário,
-     * redireciona para o login.
-     */
     protected function requireAuth(): array
     {
         if (empty($_SESSION['user_id'])) {
@@ -117,9 +94,6 @@ class Controller
         unset($_SESSION['old']);
     }
 
-    /**
-     * Gera (ou reaproveita) um token CSRF para o formulário atual.
-     */
     protected function csrfToken(): string
     {
         if (empty($_SESSION['csrf_token'])) {
@@ -128,9 +102,6 @@ class Controller
         return $_SESSION['csrf_token'];
     }
 
-    /**
-     * Valida o token CSRF enviado no POST. Interrompe a execução se inválido.
-     */
     protected function verifyCsrf(): void
     {
         $token = $_POST['csrf_token'] ?? '';
