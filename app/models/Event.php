@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/Event.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
