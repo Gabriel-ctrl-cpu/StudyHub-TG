@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/StudySession.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
@@ -18,9 +15,7 @@ class StudySession extends Model
         return (int) ($linha['total'] ?? 0);
     }
 
-    /**
-     * Minutos estudados por dia nos últimos N dias (para o gráfico semanal).
-     */
+
     public function minutesByDay(int $idUsuario, int $dias = 7): array
     {
         $sql = "
@@ -91,9 +86,6 @@ class StudySession extends Model
         return (int) ($linha['total'] ?? 0);
     }
 
-    /**
-     * Minutos estudados agrupados por semana, últimas N semanas (evolução semanal).
-     */
     public function minutesByWeek(int $idUsuario, int $semanas = 6): array
     {
         $sql = "
