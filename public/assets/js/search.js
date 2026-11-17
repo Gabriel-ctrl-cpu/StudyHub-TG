@@ -1,10 +1,3 @@
-/**
- * assets/js/search.js
- * Busca global do header: à medida que o usuário digita (com debounce),
- * consulta /busca e mostra um dropdown com os resultados agrupados por
- * tipo (Matérias, Tarefas, Anotações, Avaliações). Clicar num resultado
- * leva direto para a tela de edição daquele item.
- */
 document.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.getElementById('globalSearch');
     const input = document.getElementById('globalSearchInput');
