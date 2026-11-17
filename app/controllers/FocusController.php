@@ -1,10 +1,4 @@
 <?php
-/**
- * app/controllers/FocusController.php
- *
- * Modo Foco: exibe o cronômetro (Pomodoro) e registra automaticamente
- * a sessão de estudo no banco quando o usuário finaliza um ciclo.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Subject.php';
@@ -25,9 +19,6 @@ class FocusController extends Controller
         ], 'app');
     }
 
-    /**
-     * Registra (via AJAX) a sessão de estudo concluída no Modo Foco.
-     */
     public function store(): void
     {
         $usuario = $this->requireAuth();
