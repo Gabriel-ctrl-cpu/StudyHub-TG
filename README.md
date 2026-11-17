@@ -155,7 +155,7 @@ O roteamento é feito por um **Router** próprio (sem framework), definido em `r
 
 O sistema está **funcionalmente completo** conforme o roadmap original. Veja `TESTES.md` para o roteiro de testes manuais.
 
-## 🧪 Testes
+## 🧪 Testes 
 
 Consulte **`TESTES.md`** para o roteiro completo de testes manuais (autenticação, controle de acesso, cada módulo do sistema e responsividade).
 
@@ -178,5 +178,6 @@ Consulte **`TESTES.md`** para o roteiro completo de testes manuais (autenticaç�
 ---
 
 Desenvolvido como projeto de TCC — Análise e Desenvolvimento de Sistemas.
-#   S t u d y H u b - T G  
+#   S t u d y H u b - T G 
+ 
  
