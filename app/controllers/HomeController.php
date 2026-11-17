@@ -1,9 +1,4 @@
 <?php
-/**
- * app/controllers/HomeController.php
- *
- * Landing page pública do StudyHub.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 
