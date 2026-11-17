@@ -1,10 +1,4 @@
 <?php
-/**
- * app/controllers/ProfileController.php
- *
- * Exibe e atualiza os dados do perfil do usuário: informações
- * pessoais, foto de perfil (upload com validação) e senha.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/User.php';
@@ -42,10 +36,6 @@ class ProfileController extends Controller
         ], 'app');
     }
 
-    // -------------------------------------------------------------
-    // DADOS PESSOAIS
-    // -------------------------------------------------------------
-
     public function update(): void
     {
         $usuarioAutenticado = $this->requireAuth();
@@ -71,10 +61,6 @@ class ProfileController extends Controller
         $this->flash('success', 'Dados atualizados com sucesso.');
         $this->redirect('perfil');
     }
-
-    // -------------------------------------------------------------
-    // FOTO DE PERFIL
-    // -------------------------------------------------------------
 
     public function updatePhoto(): void
     {
@@ -132,10 +118,6 @@ class ProfileController extends Controller
         $this->flash('success', 'Foto de perfil atualizada.');
         $this->redirect('perfil');
     }
-
-    // -------------------------------------------------------------
-    // SENHA
-    // -------------------------------------------------------------
 
     public function updatePassword(): void
     {
