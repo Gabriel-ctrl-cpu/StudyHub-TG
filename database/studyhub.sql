@@ -1,16 +1,5 @@
--- =====================================================================
--- STUDYHUB - Banco de Dados
--- Plataforma pessoal de organização de estudos
--- MySQL 8+
--- =====================================================================
-
--- Garante que a conexão usada para importar este script trata tudo
--- como UTF-8, não importa a ferramenta usada (phpMyAdmin, linha de
--- comando, etc.) — evita caracteres acentuados corrompidos.
 SET NAMES utf8mb4;
 
--- Recria o banco do zero a cada importação, evitando erros de
--- "tabela já existe" ao reimportar este script.
 DROP DATABASE IF EXISTS studyhub;
 
 CREATE DATABASE studyhub
