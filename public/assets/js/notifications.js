@@ -1,9 +1,3 @@
-/**
- * assets/js/notifications.js
- * Busca as notificações reais do usuário (via /notificacoes) em toda
- * página autenticada, preenche o badge de não lidas e a lista do
- * dropdown, e permite marcar todas como lidas.
- */
 document.addEventListener('DOMContentLoaded', () => {
     const badge = document.getElementById('notifBadge');
     const list = document.getElementById('notifList');
