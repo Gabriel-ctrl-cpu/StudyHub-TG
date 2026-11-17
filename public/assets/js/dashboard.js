@@ -1,9 +1,3 @@
-/**
- * assets/js/dashboard.js
- * Renderiza os gráficos da dashboard (rosca de progresso por matéria e
- * barras de horas estudadas por dia) usando Chart.js e os dados
- * injetados pela view em `dashboardData`.
- */
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof dashboardData === 'undefined') return;
 
@@ -11,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(30,41,59,0.06)';
     const textColor = isDark ? '#9aa3b8' : '#6b7280';
 
-    // ---------------- Rosca de progresso por matéria ----------------
     const donutEl = document.getElementById('progressDonut');
     if (donutEl && dashboardData.subjects.length) {
         new Chart(donutEl, {
@@ -31,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---------------- Barras: horas estudadas por dia ----------------
     const weeklyEl = document.getElementById('weeklyChart');
     if (weeklyEl) {
         const days = [];
