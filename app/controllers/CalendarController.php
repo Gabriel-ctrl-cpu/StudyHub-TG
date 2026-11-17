@@ -1,11 +1,4 @@
 <?php
-/**
- * app/controllers/CalendarController.php
- *
- * Exibe o calendário (FullCalendar) agregando tarefas, avaliações,
- * sessões de estudo e compromissos/eventos do usuário. Também
- * permite criar/editar/excluir eventos diretamente pelo calendário.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Event.php';
@@ -34,10 +27,6 @@ class CalendarController extends Controller
         ], 'app');
     }
 
-    /**
-     * Feed JSON no formato esperado pelo FullCalendar, agregando
-     * tarefas (prazo), avaliações, sessões de estudo e eventos.
-     */
     public function data(): void
     {
         $usuario = $this->requireAuth();
@@ -102,10 +91,6 @@ class CalendarController extends Controller
 
         $this->json($items);
     }
-
-    // -------------------------------------------------------------
-    // CRUD de eventos (compromissos criados diretamente no calendário)
-    // -------------------------------------------------------------
 
     public function store(): void
     {
