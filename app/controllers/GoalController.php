@@ -1,11 +1,4 @@
 <?php
-/**
- * app/controllers/GoalController.php
- *
- * CRUD completo de metas pessoais: criar, editar, excluir e
- * atualizar o progresso (marcando conclusão automaticamente quando
- * o valor atual atinge o valor alvo).
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Goal.php';
