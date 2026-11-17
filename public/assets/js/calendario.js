@@ -1,9 +1,3 @@
-/**
- * assets/js/calendario.js
- * Inicializa o FullCalendar consumindo o feed JSON do back-end
- * (tarefas, avaliações, sessões e eventos) e gerencia o modal de
- * criação/edição/exclusão de compromissos via Fetch API.
- */
 document.addEventListener('DOMContentLoaded', () => {
     const calendarEl = document.getElementById('calendar');
     if (!calendarEl) return;
