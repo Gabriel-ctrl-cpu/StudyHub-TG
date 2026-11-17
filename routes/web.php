@@ -1,18 +1,5 @@
 <?php
-/**
- * routes/web.php
- *
- * Definição de todas as rotas da aplicação: páginas públicas
- * (landing, autenticação) e todos os módulos da área autenticada
- * (dashboard, matérias, tarefas, calendário, modo foco, metas,
- * anotações, avaliações, estatísticas, configurações, perfil).
- */
 
-/** @var Router $router */
-
-// -------------------------------------------------------------
-// Públicas
-// -------------------------------------------------------------
 $router->get('/', 'HomeController@index');
 
 $router->get('login', 'AuthController@loginForm');
@@ -26,9 +13,6 @@ $router->post('esqueci-senha', 'AuthController@forgot');
 
 $router->get('logout', 'AuthController@logout');
 
-// -------------------------------------------------------------
-// Área autenticada
-// -------------------------------------------------------------
 $router->get('dashboard', 'DashboardController@index');
 
 // Matérias
