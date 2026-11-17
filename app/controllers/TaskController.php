@@ -1,10 +1,4 @@
 <?php
-/**
- * app/controllers/TaskController.php
- *
- * CRUD completo de tarefas: listar (com filtros), criar, editar,
- * excluir, concluir/reabrir rapidamente.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Task.php';
@@ -20,10 +14,6 @@ class TaskController extends Controller
         $this->modeloTarefa = new Task();
         $this->modeloMateria = new Subject();
     }
-
-    // -------------------------------------------------------------
-    // LISTAGEM (com filtros)
-    // -------------------------------------------------------------
 
     public function index(): void
     {
@@ -48,10 +38,6 @@ class TaskController extends Controller
             'sucesso'  => $this->flash('success'),
         ], 'app');
     }
-
-    // -------------------------------------------------------------
-    // CRIAR
-    // -------------------------------------------------------------
 
     public function createForm(): void
     {
@@ -82,10 +68,6 @@ class TaskController extends Controller
         $this->flash('success', 'Tarefa criada com sucesso.');
         $this->redirect('tarefas');
     }
-
-    // -------------------------------------------------------------
-    // EDITAR
-    // -------------------------------------------------------------
 
     public function editForm(string $id): void
     {
@@ -136,10 +118,6 @@ class TaskController extends Controller
         $this->redirect('tarefas');
     }
 
-    // -------------------------------------------------------------
-    // EXCLUIR
-    // -------------------------------------------------------------
-
     public function destroy(string $id): void
     {
         $usuario = $this->requireAuth();
@@ -156,10 +134,6 @@ class TaskController extends Controller
 
         $this->redirect('tarefas');
     }
-
-    // -------------------------------------------------------------
-    // CONCLUIR / REABRIR (alternância rápida via formulário simples)
-    // -------------------------------------------------------------
 
     public function toggleComplete(string $id): void
     {
@@ -180,10 +154,6 @@ class TaskController extends Controller
 
         $this->redirect('tarefas');
     }
-
-    // -------------------------------------------------------------
-    // Validação compartilhada (criar/editar)
-    // -------------------------------------------------------------
 
     private function validatedData(int $idUsuario): ?array
     {
