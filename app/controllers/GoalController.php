@@ -126,10 +126,6 @@ class GoalController extends Controller
         $this->redirect('metas');
     }
 
-    /**
-     * Atualiza rapidamente o progresso da meta (+1 ou valor customizado),
-     * marcando como concluída automaticamente quando atinge o alvo.
-     */
     public function updateProgress(string $id): void
     {
         $usuario = $this->requireAuth();
