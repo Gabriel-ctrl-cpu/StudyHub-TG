@@ -1,11 +1,4 @@
 <?php
-/**
- * app/controllers/SubjectController.php
- *
- * CRUD completo de matérias (subjects): listar, criar, editar,
- * excluir e arquivar. Cada matéria mostra progresso (tarefas
- * concluídas) e tempo total estudado.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Subject.php';
@@ -18,10 +11,6 @@ class SubjectController extends Controller
     {
         $this->modeloMateria = new Subject();
     }
-
-    // -------------------------------------------------------------
-    // LISTAGEM
-    // -------------------------------------------------------------
 
     public function index(): void
     {
@@ -42,10 +31,6 @@ class SubjectController extends Controller
             'sucesso'      => $this->flash('success'),
         ], 'app');
     }
-
-    // -------------------------------------------------------------
-    // CRIAR
-    // -------------------------------------------------------------
 
     public function createForm(): void
     {
@@ -74,10 +59,6 @@ class SubjectController extends Controller
         $this->flash('success', 'Matéria criada com sucesso.');
         $this->redirect('materias');
     }
-
-    // -------------------------------------------------------------
-    // EDITAR
-    // -------------------------------------------------------------
 
     public function editForm(string $id): void
     {
@@ -123,10 +104,6 @@ class SubjectController extends Controller
         $this->redirect('materias');
     }
 
-    // -------------------------------------------------------------
-    // EXCLUIR
-    // -------------------------------------------------------------
-
     public function destroy(string $id): void
     {
         $usuario = $this->requireAuth();
@@ -144,10 +121,6 @@ class SubjectController extends Controller
         $this->redirect('materias');
     }
 
-    // -------------------------------------------------------------
-    // ARQUIVAR / DESARQUIVAR
-    // -------------------------------------------------------------
-
     public function archive(string $id): void
     {
         $usuario = $this->requireAuth();
@@ -164,10 +137,6 @@ class SubjectController extends Controller
 
         $this->redirect('materias');
     }
-
-    // -------------------------------------------------------------
-    // Validação compartilhada (criar/editar)
-    // -------------------------------------------------------------
 
     private function validatedData(): ?array
     {
