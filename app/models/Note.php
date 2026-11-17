@@ -1,7 +1,4 @@
 <?php
-/**
- * app/models/Note.php
- */
 
 require_once __DIR__ . '/../core/Model.php';
 
@@ -9,10 +6,6 @@ class Note extends Model
 {
     protected string $table = 'notes';
 
-    /**
-     * Lista anotações do usuário, com busca opcional por texto/tag e
-     * filtro opcional por matéria.
-     */
     public function search(int $idUsuario, string $termo = '', ?int $idMateria = null): array
     {
         $conditions = ['n.user_id = :user_id'];
