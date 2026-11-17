@@ -1,8 +1,3 @@
-/**
- * assets/js/landing.js
- * Comportamentos simples da landing page: sombra da navbar ao rolar
- * e fechamento do menu mobile ao clicar em um link.
- */
 document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.landing-nav');
 
