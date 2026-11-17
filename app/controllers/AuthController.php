@@ -1,9 +1,4 @@
 <?php
-/**
- * app/controllers/AuthController.php
- *
- * Responsável por cadastro, login, logout e recuperação de senha.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/User.php';
@@ -16,10 +11,6 @@ class AuthController extends Controller
     {
         $this->modeloUsuario = new User();
     }
-
-    // -------------------------------------------------------------
-    // LOGIN
-    // -------------------------------------------------------------
 
     public function loginForm(): void
     {
@@ -66,10 +57,6 @@ class AuthController extends Controller
 
         $this->redirect('dashboard');
     }
-
-    // -------------------------------------------------------------
-    // CADASTRO
-    // -------------------------------------------------------------
 
     public function registerForm(): void
     {
@@ -133,10 +120,6 @@ class AuthController extends Controller
         $this->redirect('dashboard');
     }
 
-    // -------------------------------------------------------------
-    // RECUPERAÇÃO DE SENHA (fluxo simplificado, sem envio real de e-mail)
-    // -------------------------------------------------------------
-
     public function forgotForm(): void
     {
         $this->render('auth/forgot', [
@@ -162,10 +145,6 @@ class AuthController extends Controller
         $this->flash('message', 'Se o e-mail informado estiver cadastrado, você receberá instruções para redefinir sua senha.');
         $this->redirect('esqueci-senha');
     }
-
-    // -------------------------------------------------------------
-    // LOGOUT
-    // -------------------------------------------------------------
 
     public function logout(): void
     {
