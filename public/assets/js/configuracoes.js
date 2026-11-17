@@ -1,13 +1,6 @@
-/**
- * assets/js/configuracoes.js
- * Controla o switch de tema (mesma lógica do header, persistida no
- * banco) e as preferências locais de notificações/preferências,
- * salvas no localStorage do navegador.
- */
 document.addEventListener('DOMContentLoaded', () => {
     const htmlEl = document.documentElement;
 
-    // ---------------- Tema ----------------
     const themeSwitch = document.getElementById('darkThemeSwitch');
     if (themeSwitch) {
         themeSwitch.addEventListener('change', () => {
@@ -22,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---------------- Preferências locais ----------------
     const STORAGE_KEY = 'studyhub_prefs';
     const savedPrefs = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
 
