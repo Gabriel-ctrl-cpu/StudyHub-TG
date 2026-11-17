@@ -1,10 +1,4 @@
 <?php
-/**
- * app/controllers/AssessmentController.php
- *
- * CRUD completo de avaliações (provas, trabalhos, seminários,
- * projetos): criar, editar, excluir e registrar nota/status.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Assessment.php';
