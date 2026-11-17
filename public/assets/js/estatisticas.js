@@ -1,8 +1,3 @@
-/**
- * assets/js/estatisticas.js
- * Renderiza os 4 gráficos da página de Estatísticas usando Chart.js
- * e os dados injetados pela view em `window.STATS_DATA`.
- */
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof window.STATS_DATA === 'undefined') return;
 
@@ -22,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return dates;
     }
 
-    // ---------------- 1. Horas estudadas por dia ----------------
     const dailyEl = document.getElementById('chartDaily');
     if (dailyEl) {
         const dates = lastNDates(14);
@@ -46,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---------------- 2. Tempo por matéria ----------------
     const subjectsEl = document.getElementById('chartSubjects');
     if (subjectsEl) {
         const data = window.STATS_DATA.subjectsTime;
@@ -64,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ---------------- 3. Tarefas concluídas por dia ----------------
     const tasksEl = document.getElementById('chartTasks');
     if (tasksEl) {
         const dates = lastNDates(14);
@@ -95,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---------------- 4. Evolução semanal ----------------
     const weeklyEl = document.getElementById('chartWeekly');
     if (weeklyEl) {
         const weeks = window.STATS_DATA.weeklyEvolution;
