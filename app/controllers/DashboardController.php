@@ -1,9 +1,4 @@
 <?php
-/**
- * app/controllers/DashboardController.php
- *
- * Tela principal após o login: resumo geral do usuário.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Subject.php';
