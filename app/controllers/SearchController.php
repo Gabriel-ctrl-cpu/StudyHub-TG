@@ -1,12 +1,4 @@
 <?php
-/**
- * app/controllers/SearchController.php
- *
- * Busca global consumida pela barra de pesquisa do header (em todas
- * as páginas autenticadas). Procura por texto em Matérias, Tarefas,
- * Anotações e Avaliações do usuário logado e retorna os resultados
- * agrupados por tipo, em JSON.
- */
 
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Subject.php';
